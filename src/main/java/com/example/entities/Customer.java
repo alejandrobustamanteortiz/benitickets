@@ -25,5 +25,4 @@ public class Customer {
     String secondLastName;
     String phoneNumber;
     String email;
-
 }
