@@ -27,6 +27,7 @@ spring.jpa.defer-datasource-initialization=true // esta de momento no
 @Getter  
 @Entity  
 @ToString
+
 ```
 
 - Atributo Id dentro de la clase
