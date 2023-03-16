@@ -91,3 +91,13 @@ public class Customer {
 
 
 
+
+## 6 - Crear controlador
+
+* Crear clase controller
+* Tiene un par de anotaciones: 
+@Controller
+@AllArgsContructor
+
+Esta es la última clase, por donde entran las peticiones al navegador
+
