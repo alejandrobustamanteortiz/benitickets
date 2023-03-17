@@ -1,11 +1,40 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Customers List</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 
 <body>
+
+    <div class="container text-xxl-center mt-5">
+
+        <h1>Customer List</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Primer apellido</th>
+                    <th scope="col">Segundo Apellido</th>
+                    <th scope="col">Numero telefono</th>
+                    <th scope="col">email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customer: ${customers}">
+                    <td th:text="${customer.id}"></td>
+                    <td th:text="${customer.firstName}"></td>
+                    <td th:text="${customer.firstLastName}"></td>
+                    <td th:text="${customer.secondLastName}"></td>
+                    <td th:text="${customer.phoneNumber}"></td>
+                    <td th:text="${customer.email}"></td>
+                </tr>
+        </table>
+    </div>
 </body>
 
 </html>

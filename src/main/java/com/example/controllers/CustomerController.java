@@ -12,9 +12,9 @@ public class CustomerController {
 
     private CustomerService customerService;
 
-    @GetMapping("/customer")
+    @GetMapping("/customers")
     public String findAll(Model model) {
-        model.addAttribute("customer", customerService.findAll());
+        model.addAttribute("customers", customerService.findAll());
         return "customer/customer-list";
     }
 }
