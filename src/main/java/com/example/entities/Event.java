@@ -14,14 +14,9 @@ import lombok.*;
 @Entity
 @ToString
 
-public class Customer {
-
+public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    String firstName;
-    String firstLastName;
-    String secondLastName;
-    String phoneNumber;
-    String email;
+    private Long Id;
+    private String eventName;
 }
