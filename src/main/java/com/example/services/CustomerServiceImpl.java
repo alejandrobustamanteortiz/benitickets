@@ -15,6 +15,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     CustomerRepository customerRepository;
 
+    //CRUD METODOS
+
     @Override
     public List<Customer> findAll() {
         return customerRepository.findAll();
@@ -34,4 +36,6 @@ public class CustomerServiceImpl implements CustomerService {
     public void deleteById(Long id) {
         customerRepository.deleteById(id);
     }
+
+    // METODOS LOGICA DE NEGOCIO
 }
