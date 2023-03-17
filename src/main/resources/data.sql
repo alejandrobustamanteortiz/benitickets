@@ -16,3 +16,17 @@ VALUES (1, 'Alberto','Diaz','Perez','667656765','albertodiaz@gmail.com'),
        (7, 'Manoli','Dinamo','Moravia','667876737','manolidinamo@gmail.com'),
        (9, 'Angel', 'Kanamura', 'Arigato', '667876737', 'angelkamura@gmail.com')
 ;
+
+TRUNCATE TABLE  ticket;
+INSERT INTO ticket (id, event_id, price_Ticket, buy_Date)
+VALUES (1, 1, 19.95, '2022-03-19'),
+       (2, 2, 40.95, '2022-03-25'),
+       (3, 3, 19.95, '2022-04-27')
+;
+
+TRUNCATE TABLE  event;
+INSERT INTO event (id, event_Name, event_Date)
+VALUES (1, "Aqualandia", '2022-03-24'),
+       (2, "Terra Mitica", '2022-03-22'),
+       (3, "Benidorm Palace", '2022-04-19')
+;

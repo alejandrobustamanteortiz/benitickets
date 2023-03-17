@@ -3,6 +3,9 @@ package com.example.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,9 +19,11 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    @ManyToOne
-    @JoinColumn(name = "event_id")
+
+   @ManyToOne
+   @JoinColumn(name = "event_id")
     private Event event;
+
     private Double priceTicket;
-    private Long stock;
+    private LocalDate buyDate;
 }

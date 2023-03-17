@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,4 +21,5 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String eventName;
+    private LocalDate eventDate;
 }
