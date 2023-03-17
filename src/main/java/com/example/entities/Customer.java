@@ -1,9 +1,6 @@
 package com.example.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Builder
@@ -23,5 +20,6 @@ public class Customer {
     String firstLastName;
     String secondLastName;
     String phoneNumber;
+    @Column(unique = true, nullable = false)
     String email;
 }

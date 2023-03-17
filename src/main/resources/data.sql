@@ -1,14 +1,18 @@
+-- spring.sql.init.mode=always
+-- spring.jpa.defer-datasource-initialization=true
+-- spring.jpa.hibernate.ddl-auto=create
+
 USE benitickets;
 SET FOREIGN_KEY_CHECKS = 0;
 
 TRUNCATE TABLE  customer;
-INSERT INTO customer (id, firstName, firstLastName, secondLastName, phoneNumber, email)
-VALUES (1, 'England','Deninton','Big London','Road','98230'),
-       (2, 'Spain','Recoletos','Comunidad de Madrid','Paseo','68249'),
-       (3, 'Spain','San Nicolas','Navarra','Calle','31000'),
-       (4, 'Spain','Cristobal Colon','Zaragoza','Plaza','58423'),
-       (5, 'Spain','España','Sevilla','Plaza','32975'),
-       (6, 'France','Liberte','Ile de France','Avenue','12896'),
-       (7, 'República Checa','Dinamo libery','Moravia','Street','89837'),
-       (9, 'Japón', 'Kanamura', 'Arigato', 'Street', '837362')
+INSERT INTO customer (id, first_Name, first_Last_Name, second_Last_Name, phone_Number, email)
+VALUES (1, 'Alberto','Diaz','Perez','667656765','albertodiaz@gmail.com'),
+       (2, 'Iñaki','Recoletos','Diaz','667876737','inakidos@gmail.com'),
+       (3, 'Pedro','San Nicolas','Navarra','667876727','pedrosannico@hotmail.com'),
+       (4, 'Macarena','Cristobal','Colon','665242526','macacolon@gmail.com'),
+       (5, 'Daniel','España','Castro','667873636','castrodani@gmail.com'),
+       (6, 'Robert','Lafuente','Dalto','667876737','daltodiaz@gmail.com'),
+       (7, 'Manoli','Dinamo','Moravia','667876737','manolidinamo@gmail.com'),
+       (9, 'Angel', 'Kanamura', 'Arigato', '667876737', 'angelkamura@gmail.com')
 ;
