@@ -26,4 +26,5 @@ public class Ticket {
 
     private Double priceTicket;
     private LocalDate buyDate;
+    private String typeTicket;
 }

@@ -18,10 +18,10 @@ VALUES (1, 'Alberto','Diaz','Perez','667656765','albertodiaz@gmail.com'),
 ;
 
 TRUNCATE TABLE  ticket;
-INSERT INTO ticket (id, event_id, price_Ticket, buy_Date)
-VALUES (1, 1, 19.95, '2022-03-19'),
-       (2, 2, 40.95, '2022-03-25'),
-       (3, 3, 19.95, '2022-04-27')
+INSERT INTO ticket (id, event_id, price_Ticket, buy_Date, type_Ticket)
+VALUES (1, 1, 19.95, '2022-03-19', 'ADULTO'),
+       (2, 2, 40.95, '2022-03-25', 'ADULTO'),
+       (3, 3, 19.95, '2022-04-27', 'NIÑO')
 ;
 
 TRUNCATE TABLE  event;
