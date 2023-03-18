@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events List</title>
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+
+<body>
+
+<div class="container text-xxl-center mt-5">
+
+  <h1>Events List</h1>
+
+  <table class="table mt-5">
+    <thead class="table-header">
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="event: ${events}">
+      <td th:text="${event.id}"></td>
+      <td th:text="${event.eventName}"></td>
+      <td th:text="${event.eventDate}"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
