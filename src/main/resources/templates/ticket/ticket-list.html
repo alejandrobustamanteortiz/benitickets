@@ -13,7 +13,7 @@
 
   <h1>Ticket List</h1>
 
-  <table class="table mt-5">
+  <table class="table mt-5 text-center">
     <thead class="table-header">
     <tr>
       <th scope="col">#id</th>
@@ -21,6 +21,7 @@
       <th scope="col">Precio</th>
       <th scope="col">Fecha de compra</th>
       <th scope="col">Tipo entrada</th>
+      <th scope="col">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -30,6 +31,11 @@
       <td th:text="${ticket.priceTicket}"></td>
       <td th:text="${ticket.buyDate}"></td>
       <td th:text="${ticket.typeTicket}"></td>
+      <td>
+        <a><button type="button" class="btn btn-primary fs-6">Ver</button></a>
+        <a><button type="button" class="btn btn-warning fs-6">Editar</button></a>
+        <a><button type="button" class="btn btn-danger fs-6">Borrar</button></a>
+      </td>
     </tr>
   </table>
 </div>
