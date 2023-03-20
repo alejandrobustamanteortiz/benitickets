@@ -25,6 +25,5 @@ public class Ticket {
     private Event event;
 
     private Double priceTicket;
-    private LocalDate buyDate;
     private TypeTicket typeTicket;
 }

@@ -19,7 +19,6 @@
       <th scope="col">#id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Precio</th>
-      <th scope="col">Fecha de compra</th>
       <th scope="col">Tipo entrada</th>
       <th scope="col">Actions</th>
     </tr>
@@ -29,7 +28,6 @@
       <td th:text="${ticket.id}"></td>
       <td th:text="${ticket.getEvent().eventName}"></td>
       <td th:text="${ticket.priceTicket}"></td>
-      <td th:text="${ticket.buyDate}"></td>
       <td th:text="${ticket.typeTicket}"></td>
       <td>
         <a class="btn btn-primary fs-6" th:href="@{/tickets/{id}(id=${ticket.id})}">Ver</a>
