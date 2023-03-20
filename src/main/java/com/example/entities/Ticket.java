@@ -1,5 +1,6 @@
 package com.example.entities;
 
+import com.example.enums.TypeTicket;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -25,5 +26,5 @@ public class Ticket {
 
     private Double priceTicket;
     private LocalDate buyDate;
-    private String typeTicket;
+    private TypeTicket typeTicket;
 }
