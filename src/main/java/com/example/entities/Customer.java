@@ -20,6 +20,7 @@ public class Customer {
     String firstLastName;
     String secondLastName;
     String phoneNumber;
+
     @Column(unique = true, nullable = false)
     String email;
 }
