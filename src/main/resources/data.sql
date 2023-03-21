@@ -25,8 +25,8 @@ VALUES (1, 1, 19.95, 1),
 ;
 
 TRUNCATE TABLE  event;
-INSERT INTO event (id, event_Name, event_Date, capacity)
-VALUES (1, "Aqualandia", '2022-03-24', 2000),
-       (2, "Terra Mitica", '2022-03-22', 5000),
-       (3, "Benidorm Palace", '2022-04-19', 200)
+INSERT INTO event (id, event_Name, event_Date, capacity, category)
+VALUES (1, "Aqualandia", '2022-03-24', 2000, 2),
+       (2, "Terra Mitica", '2022-03-22', 5000, 2),
+       (3, "Benidorm Palace", '2022-04-19', 200, 3)
 ;

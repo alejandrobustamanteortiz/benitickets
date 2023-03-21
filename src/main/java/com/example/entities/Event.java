@@ -1,5 +1,6 @@
 package com.example.entities;
 
+import com.example.enums.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +30,5 @@ public class Event {
     private List<Ticket> tickets = new ArrayList<>();
 
     private Long capacity;
+    private Category category;
 }
