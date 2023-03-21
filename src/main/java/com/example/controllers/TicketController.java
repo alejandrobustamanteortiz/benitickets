@@ -32,4 +32,14 @@ public class TicketController {
             }
         return"ticket/ticket-detail";
     }
+
+    @GetMapping("/tickets/{id}/edit")
+    public String editForm(Model model, @PathVariable Long id){
+
+        Optional<Ticket> optionalTicket = ticketRepository.findById(id);
+        if(optionalTicket.isPresent()){
+            model.addAttribute("ticketId", optionalTicket.get());
+        }
+        return"ticket/ticket-form";
+    }
 }
