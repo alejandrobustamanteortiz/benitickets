@@ -24,7 +24,8 @@ public class Event {
     private Long Id;
 
     private String eventName;
-    private LocalDate eventDate;
+    private LocalDate initDate;
+    private LocalDate endDate;
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ticket> tickets = new ArrayList<>();

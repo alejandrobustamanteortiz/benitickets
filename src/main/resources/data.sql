@@ -21,12 +21,14 @@ TRUNCATE TABLE  ticket;
 INSERT INTO ticket (id, event_id, price_Ticket, type_Ticket)
 VALUES (1, 1, 19.95, 1),
        (2, 2, 40.95, 0),
-       (3, 3, 19.95, 1)
+       (3, 3, 19.95, 1),
+       (4, 1, 29.95, 0),
+       (5, 1, 9.95, 2)
 ;
 
 TRUNCATE TABLE  event;
-INSERT INTO event (id, event_Name, event_Date, capacity, category)
-VALUES (1, "Aqualandia", '2022-03-24', 2000, 2),
-       (2, "Terra Mitica", '2022-03-22', 5000, 2),
-       (3, "Benidorm Palace", '2022-04-19', 200, 3)
+INSERT INTO event (id, event_Name, init_Date, end_Date, capacity, category)
+VALUES (1, "Aqualandia", '2023-04-24', '2023-09-24', 2000, 2),
+       (2, "Terra Mitica", '2023-05-22', '2023-09-01', 5000, 2),
+       (3, "Benidorm Palace", '2023-04-19', '2024-04-19', 200, 3)
 ;
