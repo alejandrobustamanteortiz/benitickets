@@ -6,5 +6,6 @@ public enum Category {
     DEPORTES,
     ATRACCIONES,
     ESPECTACULO,
-    OCIO
+    OCIO,
+    ANIMALES
 }

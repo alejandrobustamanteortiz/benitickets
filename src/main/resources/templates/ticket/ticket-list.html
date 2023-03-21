@@ -19,8 +19,8 @@
       <th scope="col">#id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Precio</th>
-      <th scope="col">Tipo entrada</th>
       <th scope="col">Stock</th>
+      <th scope="col">Tipo entrada</th>
       <th scope="col">Actions</th>
     </tr>
     </thead>
@@ -28,8 +28,7 @@
     <tr th:each="ticket: ${tickets}">
       <td th:text="${ticket.id}"></td>
       <td th:text="${ticket.getEvent().eventName}"></td>
-      <td th:text="${ticket.priceTicket}"></td>
-      <td th:text="${ticket.priceTicket}"></td>
+      <td th:text="${ticket.priceTicket}"><</td>
       <td th:text="${ticket.stock}"></td>
       <td th:text="${ticket.typeTicket}"></td>
       <td>
