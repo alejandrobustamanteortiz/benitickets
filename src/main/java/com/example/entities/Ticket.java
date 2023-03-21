@@ -26,4 +26,5 @@ public class Ticket {
 
     private Double priceTicket;
     private TypeTicket typeTicket;
+    private Long stock;
 }
