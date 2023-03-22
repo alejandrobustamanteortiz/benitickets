@@ -29,6 +29,8 @@ public class TicketController {
         Optional<Ticket> optionalTicket = ticketRepository.findById(id);
             if(optionalTicket.isPresent()){
                 model.addAttribute("ticketId", optionalTicket.get());
+            } else {
+                model.addAttribute("error", "Not found");
             }
         return"ticket/ticket-detail";
     }
