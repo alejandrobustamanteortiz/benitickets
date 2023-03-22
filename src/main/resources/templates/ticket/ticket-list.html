@@ -33,7 +33,7 @@
       <td th:text="${ticket.typeTicket}"></td>
       <td>
         <a class="btn btn-primary fs-6" th:href="@{/tickets/{id}(id=${ticket.id})}">Ver</a>
-        <a><button type="button" class="btn btn-warning fs-6">Editar</button></a>
+        <a class="btn btn-secondary fs-6" th:href="@{/tickets/{id}/showEditForm(id=${ticket.id})}">Editar</a>
         <a class="btn btn-danger fs-6" th:href="@{/tickets/{id}/delete(id=${ticket.id})}">Borrar</a>
       </td>
     </tr>

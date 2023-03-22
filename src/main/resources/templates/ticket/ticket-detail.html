@@ -30,8 +30,8 @@
                     </ul>
                     <div class="card-body">
                         <a type="button" class="btn btn-secondary" th:href="@{/tickets}">Volver</a>
-                        <a><button type="button" class="btn btn-warning fs-6">Editar</button></a>
-                        <a><button type="button" class="btn btn-danger fs-6">Borrar</button></a>
+                        <a class="btn btn-warning fs-6" th:href="@{/tickets/{id}/showEditForm(id=${ticketId.id})}">Editar</a>
+                        <a class="btn btn-danger fs-6" th:href="@{/tickets/{id}/delete(id=${ticketId.id})}">Borrar</a>
                     </div>
                 </div>
             </div>
