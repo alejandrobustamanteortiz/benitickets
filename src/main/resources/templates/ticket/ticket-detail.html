@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket List</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+
+<body>
+
+<div class="container text-center mt-5">
+    <div class="row align-items-start">
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            <div class="container text-xxl-center">
+
+
+                <div class="card" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${ticketId.getEvent().eventName}">Aqualandia</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item "><p>Precio: <span th:text="${ticketId.priceTicket}"></span>€</p></li>
+                        <li class="list-group-item"><p>Entradas disponibles: <span th:text="${ticketId.stock}"></span></p></li>
+                        <li class="list-group-item"><p>Capacidad Máxima: <span th:text="${ticketId.getEvent().capacity}"></span></p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a type="button" class="btn btn-secondary" th:href="@{/tickets}">Volver</a>
+                        <a><button type="button" class="btn btn-warning fs-6">Editar</button></a>
+                        <a><button type="button" class="btn btn-danger fs-6">Borrar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
