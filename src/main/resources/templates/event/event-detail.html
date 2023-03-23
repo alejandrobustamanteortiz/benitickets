@@ -30,9 +30,9 @@
             <li class="list-group-item"><p>Categoria: <span th:text="${eventsId.category}"></span></p></li>
           </ul>
           <div class="card-body">
-            <a type="button" class="btn btn-secondary" th:href="@{/events}">Volver</a>
-            <a class="btn btn-warning fs-6">Editar</a>
-            <a class="btn btn-danger fs-6">Borrar</a>
+            <a class="btn btn-secondary" th:href="@{/events}">Volver</a>
+            <a class="btn btn-warning fs-6" th:href="@{/events/{id}/showEventForm(id=${eventsId.id})}">Editar</a>
+            <a class="btn btn-danger fs-6" th:href="@{/events/{id}/delete(id=${eventsId.id})}">Borrar</a>
           </div>
         </div>
       </div>
