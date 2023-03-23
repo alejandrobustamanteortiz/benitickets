@@ -52,6 +52,6 @@ public class EventController {
         } else {
             model.addAttribute("error", "Not found");
         }
-        return"event/event-form";
+        return"mantenimiento-web";
     }
 }

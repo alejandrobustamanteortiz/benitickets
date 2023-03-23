@@ -23,32 +23,32 @@ public class CustomerController {
     }
 
     @GetMapping("/customers/{id}")
-    public String findById(Model model, @PathVariable Long id){
+    public String findById(Model model, @PathVariable Long id) {
         Optional<Customer> customerOptional = customerService.findById(id);
 
-        if(customerOptional.isPresent()){
-            model.addAttribute("customerId" , customerOptional.get());
-        }else {
+        if (customerOptional.isPresent()) {
+            model.addAttribute("customerId", customerOptional.get());
+        } else {
             model.addAttribute("error", "Not found");
         }
         return "customer/customer-detail";
     }
 
     @GetMapping("/customers/{id}/delete")
-    public String deleteById(@PathVariable Long id){
+    public String deleteById(@PathVariable Long id) {
         customerService.deleteById(id);
         return "redirect:/customers";
     }
 
     @GetMapping("/customers/{id}/editForm")
-    public String showCustomerForm(Model model, @PathVariable Long id){
+    public String showCustomerForm(Model model, @PathVariable Long id) {
         Optional<Customer> customerOptional = customerService.findById(id);
 
-        if(customerOptional.isPresent()){
-            model.addAttribute("customerId" , customerOptional.get());
-        }else {
+        if (customerOptional.isPresent()) {
+            model.addAttribute("customerId", customerOptional.get());
+        } else {
             model.addAttribute("error", "Not found");
         }
-        return "mantenimiento-web";
+        return "mantenimiento-web"; //De momento, devolvemos al html mantenimiento.
     }
 }

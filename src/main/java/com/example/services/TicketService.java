@@ -10,8 +10,11 @@ public interface TicketService {
     //CRUD
 
     List<Ticket> findAll();
+
     Optional<Ticket> findById(Long id);
-    Ticket save (Ticket ticket);
+
+    Ticket save(Ticket ticket);
+
     void deleteById(Long id);
 
 }

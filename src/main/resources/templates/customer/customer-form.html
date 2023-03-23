@@ -2,22 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Customer formulario</title>
-  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <meta charset="UTF-8">
+    <title>Customer formulario</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 
 <body>
 <div th:replace="navbar :: navbar"></div>
 <div class="text-center mt-5">
 
-  <h1 class="mt-5">En construcción...</h1>
+    <h1 class="mt-5">En construcción...</h1>
+    <p>En esta pantalla se mostrará el <span><strong>formulario</strong></span> a completar por el usuario, para editar
+        el customer.</p>
 
-  <p>En esta pantalla se mostrará el <span><strong>formulario</strong></span> a completar por el usuario, para editar el customer.</p>
-  <img th:href="obras.jpg" alt="main" width="250">
-
-
-  <a class="btn btn-primary fs-6" th:href="@{/customers}">Volver</a>
+    <a class="btn btn-primary fs-6" th:href="@{/customers}">Volver</a>
 
 </div>
 

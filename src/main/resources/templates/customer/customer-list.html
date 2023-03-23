@@ -9,37 +9,37 @@
 
 <body>
 <div th:replace="navbar :: navbar"></div>
-    <div class="container text-xxl-center mt-5">
+<div class="container text-xxl-center mt-5">
 
-        <h1>Customer List</h1>
+    <h1>Customer List</h1>
 
-        <table class="table mt-5">
-            <thead class="table-header">
-                <tr>
-                    <th scope="col">#id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Primer apellido</th>
-                    <th scope="col">Segundo Apellido</th>
-                    <th scope="col">Teléfono</th>
-                    <th scope="col">eMail</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="customer: ${customers}">
-                    <td th:text="${customer.id}"></td>
-                    <td th:text="${customer.firstName}"></td>
-                    <td th:text="${customer.firstLastName}"></td>
-                    <td th:text="${customer.secondLastName}"></td>
-                    <td th:text="${customer.phoneNumber}"></td>
-                    <td th:text="${customer.email}"></td>
-                    <td>
-                        <a class="btn btn-primary" th:href="@{/customers/{id}(id=${customer.id})}">Ver</a>
-                        <a class="btn btn-secondary" th:href="@{/customers/{id}/editForm(id=${customer.id})}">Editar</a>
-                        <a class="btn btn-danger" th:href="@{/customers/{id}/delete(id=${customer.id})}">Borrar</a>
-                    </td>
-                </tr>
-        </table>
-    </div>
+    <table class="table mt-5">
+        <thead class="table-header">
+        <tr>
+            <th scope="col">#id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Primer apellido</th>
+            <th scope="col">Segundo Apellido</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">eMail</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customer: ${customers}">
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.firstLastName}"></td>
+            <td th:text="${customer.secondLastName}"></td>
+            <td th:text="${customer.phoneNumber}"></td>
+            <td th:text="${customer.email}"></td>
+            <td>
+                <a class="btn btn-primary" th:href="@{/customers/{id}(id=${customer.id})}">Ver</a>
+                <a class="btn btn-secondary" th:href="@{/customers/{id}/editForm(id=${customer.id})}">Editar</a>
+                <a class="btn btn-danger" th:href="@{/customers/{id}/delete(id=${customer.id})}">Borrar</a>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
