@@ -41,4 +41,17 @@ public class CustomerController {
 
         return "redirect:/customers";
     }
+
+    @GetMapping("/customers/{id}/editForm")
+    public String showCustomerForm(Model model, @PathVariable Long id){
+        Optional<Customer> customerOptional = customerService.findById(id);
+
+        if(customerOptional.isPresent()){
+            model.addAttribute("customerId" , customerOptional.get());
+        }else {
+            model.addAttribute("error", "Not found");
+        }
+        return "customer/customer-form";
+
+    }
 }

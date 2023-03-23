@@ -35,8 +35,8 @@
                     <td th:text="${customer.email}"></td>
                     <td>
                         <a class="btn btn-primary" th:href="@{/customers/{id}(id=${customer.id})}">Ver</a>
-                        <a class="btn btn-secondary">Editar</a>
-                        <a class="btn btn-danger">Borrar</a>
+                        <a class="btn btn-secondary" th:href="@{/customers/{id}/editForm(id=${customer.id})}">Editar</a>
+                        <a class="btn btn-danger" th:href="@{/customers/{id}/delete(id=${customer.id})}">Borrar</a>
                     </td>
                 </tr>
         </table>

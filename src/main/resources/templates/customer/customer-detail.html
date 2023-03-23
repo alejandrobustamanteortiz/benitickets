@@ -30,8 +30,8 @@
             <li class="list-group-item"><p>Telefono: <span th:text="${customerId.phoneNumber}"></span></p></li>
           </ul>
           <div class="card-body">
-            <a class="btn btn-secondary" th:href="@{/customers}">Volver</a>
-            <a class="btn btn-warning fs-6">Editar</a>
+            <a class="btn btn-secondary fs-6" th:href="@{/customers}">Volver</a>
+            <a class="btn btn-warning fs-6" th:href="@{/customers/{id}/editForm(id=${customerId.id})}">Editar</a>
             <a class="btn btn-danger fs-6" th:href="@{/customers/{id}/delete(id=${customerId.id})}">Borrar</a>
           </div>
         </div>
