@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Detail</title>
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+
+<body>
+<div th:replace="navbar :: navbar"></div>
+<div class="container text-center mt-5">
+  <div class="row align-items-start">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      <div class="container text-xxl-center">
+
+
+        <div class="card" style="width: 18rem;">
+
+          <div class="card-body">
+            <h5 class="card-title" th:text="${eventsId.getEventName()}"></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item "><p>Fecha inicial <span th:text="${eventsId.initDate}"></span></p></li>
+            <li class="list-group-item"><p>Fecha final: <span th:text="${eventsId.endDate}"></span></p></li>
+            <li class="list-group-item"><p>Categoria: <span th:text="${eventsId.category}"></span></p></li>
+          </ul>
+          <div class="card-body">
+            <a type="button" class="btn btn-secondary" th:href="@{/tickets}">Volver</a>
+            <a class="btn btn-warning fs-6">Editar</a>
+            <a class="btn btn-danger fs-6">Borrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

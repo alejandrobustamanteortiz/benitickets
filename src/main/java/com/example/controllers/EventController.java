@@ -1,11 +1,14 @@
 package com.example.controllers;
 
-import com.example.repositories.CustomerRepository;
+import com.example.entities.Event;
 import com.example.repositories.EventRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Optional;
 
 @Controller
 @AllArgsConstructor
@@ -20,5 +23,16 @@ public class EventController {
 
         model.addAttribute("events", eventRepository.findAll());
         return"event/event-list";
+    }
+
+    @GetMapping("/events/{id}")
+    public String findById(Model model, @PathVariable Long id){
+        Optional<Event> optionalEvent = eventRepository.findById(id);
+        if(optionalEvent.isPresent()){
+            model.addAttribute("eventsId", optionalEvent.get());
+        } else {
+            model.addAttribute("error", "Not found");
+        }
+        return"event/event-detail";
     }
 }

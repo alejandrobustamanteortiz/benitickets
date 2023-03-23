@@ -21,6 +21,7 @@
       <th scope="col">Fecha inicio</th>
       <th scope="col">Fecha final</th>
       <th scope="col">Categoría</th>
+      <th scope="col">Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -30,6 +31,9 @@
       <td th:text="${event.initDate}"></td>
       <td th:text="${event.endDate}"></td>
       <td th:text="${event.category}"></td>
+      <td>
+        <a class="btn btn-primary" th:href="@{/events/{id}(id=${event.id})}">Ver</a>
+      </td>
     </tr>
   </table>
 </div>
