@@ -36,9 +36,7 @@ public class CustomerController {
 
     @GetMapping("/customers/{id}/delete")
     public String deleteById(@PathVariable Long id){
-
         customerService.deleteById(id);
-
         return "redirect:/customers";
     }
 
@@ -51,7 +49,6 @@ public class CustomerController {
         }else {
             model.addAttribute("error", "Not found");
         }
-        return "customer/customer-form";
-
+        return "mantenimiento-web";
     }
 }
