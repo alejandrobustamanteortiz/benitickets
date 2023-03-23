@@ -26,10 +26,11 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item "><p>Fecha inicial <span th:text="${eventsId.initDate}"></span></p></li>
             <li class="list-group-item"><p>Fecha final: <span th:text="${eventsId.endDate}"></span></p></li>
+            <li class="list-group-item"><p>Dias Total: <span th:text="${totalDays}"></span></p></li>
             <li class="list-group-item"><p>Categoria: <span th:text="${eventsId.category}"></span></p></li>
           </ul>
           <div class="card-body">
-            <a type="button" class="btn btn-secondary" th:href="@{/tickets}">Volver</a>
+            <a type="button" class="btn btn-secondary" th:href="@{/events}">Volver</a>
             <a class="btn btn-warning fs-6">Editar</a>
             <a class="btn btn-danger fs-6">Borrar</a>
           </div>

@@ -15,4 +15,8 @@ public interface EventService {
     Event save(Event event);
 
     void deleteById(Long id);
+
+    //LOGICA DE NEGOCIO
+
+    Long totalDaysEvent(Event event);
 }
