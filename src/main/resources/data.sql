@@ -10,7 +10,7 @@ FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE customer;
 INSERT INTO customer (id, first_Name, first_Last_Name, second_Last_Name, phone_Number, email, nationality)
 VALUES (1, 'Alberto', 'Diaz', 'Perez', '667656765', 'albertodiaz@gmail.com', 1),
-       (2, 'Iñaki', 'Recoletos', 'Diaz', '667876737', 'inakidos@gmail.com', 2),
+       (2, 'Joan', 'Puig', 'Diaz', '667876737', 'joanpuig@gmail.com', 2),
        (3, 'Pedro', 'San Nicolas', 'Navarra', '667876727', 'pedrosannico@hotmail.com', 1),
        (4, 'Macarena', 'Cristobal', 'Colon', '665242526', 'macacolon@gmail.com', 2),
        (5, 'Daniel', 'España', 'Castro', '667873636', 'castrodani@gmail.com', 1),

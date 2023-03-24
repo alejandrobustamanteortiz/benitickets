@@ -49,6 +49,6 @@ public class CustomerController {
         } else {
             model.addAttribute("error", "Not found");
         }
-        return "mantenimiento-web"; //De momento, devolvemos al html mantenimiento.
+        return "customer/customer-form"; //De momento, devolvemos al html mantenimiento.
     }
 }

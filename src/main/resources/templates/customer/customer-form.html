@@ -8,16 +8,70 @@
 </head>
 
 <body>
-<div th:replace="navbar :: navbar"></div>
-<div class="text-center mt-5">
+    <div th:replace="navbar :: navbar"></div>
 
-    <h1 class="mt-5">En construcción...</h1>
-    <p>En esta pantalla se mostrará el <span><strong>formulario</strong></span> a completar por el usuario, para editar
-        el customer.</p>
+    <div class="container text-center mt-3">
+        <div class="row align-items-start">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                <form th:object="${customerId}">
+                    <div class="card mx-auto mt-2" style="width: 18rem;">
 
-    <a class="btn btn-primary fs-6" th:href="@{/customers}">Volver</a>
+                        <div class="card-body">
+                            <input type="hidden" id="id" name="id" th:field="*{id}" />
 
-</div>
+                            <div class="mb-2 ">
+                                <strong><label for="name" class="form-label">Nombre: </label></strong>
+                                <input type="text" class="form-control" id="name" placeholder="introduzca nombre...">
+                            </div>
+                            <div class="mb-2 ">
+                                <strong><label for="firstLastName" class="form-label">Primer apellido: </label></strong>
+                                <input type="text" class="form-control" id="firstLastName" placeholder="Primer apellido...">
+                            </div>
+                            <div class="mb-2 ">
+                                <strong><label for="secondLastName" class="form-label">Segundo apellido: </label></strong>
+                                <input type="text" class="form-control" id="secondLastName" placeholder="Segundo apellido...">
+                            </div>
+                            <div class="mb-2 ">
+                                <strong><label for="phoneNumber" class="form-label">Teléfono: </label></strong>
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="Número telefono...">
+                            </div>
+                            <div class="mb-2 ">
+                                <strong><label for="email" class="form-label">Email: </label></strong>
+                                <input type="text" class="form-control" id="email" placeholder="Email...">
+                            </div>
+
+                            <div  class="mt-2">
+                                <strong><label for="nationality" class="form-label">Nacionalidad: </label></strong>
+                                <select id="nationality" class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="0">Inglés</option>
+                                    <option value="1">Español</option>
+                                    <option value="2">Catalán</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body text-center">
+
+                            <button type="submit" class="btn btn-success" >Guardar</button>
+                            <a class="btn btn-danger" th:href="@{/customers}">Cancelar</a>
+
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
