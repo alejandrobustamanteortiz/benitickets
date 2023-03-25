@@ -10,41 +10,29 @@
 <body>
     <div th:replace="navbar :: navbar"></div>
 
-    <div class="container text-center mt-3">
+    <div class="container text-center">
         <div class="row align-items-start">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                <form th:object="${customerId}">
-                    <div class="card mx-auto mt-2" style="width: 18rem;">
+            <div class="col-6" style="background: aquamarine">HHHHHHHHHHH</div>
+            <div class="col-6" style="background: darkgrey">
+                <div class="container text-center mt-3 mb-3">
 
-                        <div class="card-body">
-                            <input type="hidden" id="id" name="id" th:field="*{id}" />
+                    <div class="row align-items-start text-lg-start">
 
-                            <div class="mb-2 ">
-                                <strong><label for="name" class="form-label">Nombre: </label></strong>
-                                <input type="text" class="form-control" id="name" placeholder="introduzca nombre...">
+                        <div class="col-6" style="background: antiquewhite">
+                            <div class="mb-2">
+                                <label for="name">Nombre:</label>
+                                <input id="name" type="text" class="form-control">
                             </div>
-                            <div class="mb-2 ">
-                                <strong><label for="firstLastName" class="form-label">Primer apellido: </label></strong>
-                                <input type="text" class="form-control" id="firstLastName" placeholder="Primer apellido...">
+                            <div class="mb-2">
+                                <label for="lastName">Primer apellido:</label>
+                                <input id="lastName" type="text" class="form-control">
                             </div>
-                            <div class="mb-2 ">
-                                <strong><label for="secondLastName" class="form-label">Segundo apellido: </label></strong>
-                                <input type="text" class="form-control" id="secondLastName" placeholder="Segundo apellido...">
+                            <div class="mb-2">
+                                <label for="email">Email:</label>
+                                <input id="email" type="text" class="form-control">
                             </div>
-                            <div class="mb-2 ">
-                                <strong><label for="phoneNumber" class="form-label">Teléfono: </label></strong>
-                                <input type="text" class="form-control" id="phoneNumber" placeholder="Número telefono...">
-                            </div>
-                            <div class="mb-2 ">
-                                <strong><label for="email" class="form-label">Email: </label></strong>
-                                <input type="text" class="form-control" id="email" placeholder="Email...">
-                            </div>
-
                             <div  class="mt-2">
-                                <strong><label for="nationality" class="form-label">Nacionalidad: </label></strong>
+                                <label for="nationality" class="form-label">Nacionalidad: </label>
                                 <select id="nationality" class="form-select" aria-label="Default select example">
                                     <option selected>Open this select menu</option>
                                     <option value="0">Inglés</option>
@@ -52,24 +40,32 @@
                                     <option value="2">Catalán</option>
                                 </select>
                             </div>
-
                         </div>
-
-                        <div class="card-body text-center">
-
-                            <button type="submit" class="btn btn-success" >Guardar</button>
-                            <a class="btn btn-danger" th:href="@{/customers}">Cancelar</a>
-
+                        <div class="col-6" style="background: aquamarine">
+                            <div class="mb-2 container" style="width: 144px; height: 61px">
+                            </div>
+                            <div class="mb-2">
+                                <label for="secondLastName">Segundo apellido:</label>
+                                <input id="secondLastName" type="text" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone">Teléfono:</label>
+                                <input id="phone" type="text" class="form-control">
+                            </div>
+                            <div class="mb-2 text-center">
+                                <button class="btn btn-primary mt-4"> Guardar</button>
+                                <button class="btn btn-danger mt-4"> Cancelar</button>
+                            </div>
                         </div>
 
 
                     </div>
-                </form>
-            </div>
-            <div class="col">
-                One of three columns
+
+                </div>
+
             </div>
         </div>
+
     </div>
 
 
