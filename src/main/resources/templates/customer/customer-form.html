@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <title>Customer formulario</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 
 <body>
     <div th:replace="navbar :: navbar"></div>
 
-    <div class="container text-center">
+    <div class="container text-center mt-5" style="background: cornflowerblue">
         <div class="row align-items-start">
-            <div class="col-6" style="background: aquamarine">HHHHHHHHHHH</div>
-            <div class="col-6" style="background: darkgrey">
+            <div class="col-6">
+                <h1 class="mt-5">Bienvenido a Benitickets</h1>
+                <p>¿A qué estás esperando?<br> registrate ahora mismo y consigue tus entradas en un instante.</p>
+
+            </div>
+            <div class="col-6">
                 <div class="container text-center mt-3 mb-3">
 
                     <div class="row align-items-start text-lg-start">
 
-                        <div class="col-6" style="background: antiquewhite">
+                        <div class="col-6">
                             <div class="mb-2">
                                 <label for="name">Nombre:</label>
                                 <input id="name" type="text" class="form-control">
@@ -32,16 +37,16 @@
                                 <input id="email" type="text" class="form-control">
                             </div>
                             <div  class="mt-2">
-                                <label for="nationality" class="form-label">Nacionalidad: </label>
+                                <label for="nationality" class="form-label">País: </label>
                                 <select id="nationality" class="form-select" aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
+                                    <option selected>Elegir...</option>
                                     <option value="0">Inglés</option>
                                     <option value="1">Español</option>
                                     <option value="2">Catalán</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-6" style="background: aquamarine">
+                        <div class="col-6">
                             <div class="mb-2 container" style="width: 144px; height: 61px">
                             </div>
                             <div class="mb-2">
@@ -54,7 +59,7 @@
                             </div>
                             <div class="mb-2 text-center">
                                 <button class="btn btn-primary mt-4"> Guardar</button>
-                                <button class="btn btn-danger mt-4"> Cancelar</button>
+                                <a class="btn btn-danger mt-4" th:href="@{/customers}"> Cancelar</a>
                             </div>
                         </div>
 
